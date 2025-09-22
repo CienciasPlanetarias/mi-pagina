@@ -1,0 +1,381 @@
+/* ===================== ESTE CSS ES DEL HTML FASES-LUNARES QUE SOLO MODIFICA ESA PAGINA ===================== */
+
+
+/* ===================== Intro Section ===================== */
+.intro-section {
+ 
+  color: #f9f9f9;
+}
+
+.intro-section h1 {
+  color: #f5c518;
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1rem;
+}
+
+.intro-section img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.intro-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ===================== Reset container ===================== */
+.container {
+  background: transparent !important; /* elimina fondo azul */
+}
+
+/* ===================== Sección de fases ===================== */
+#explicacion-fases.fases-lunares-explicacion h2 {
+  color: #f5c518; /* amarillo */
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #f5c518; /* subrayado moderno */
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+#explicacion-fases.fases-lunares-explicacion p {
+  color: #f0f0f0;
+  font-family: 'Roboto',sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ==== Bloques estilo revista ==== */
+#explicacion-fases.fases-lunares-explicacion .fase-card {
+  display: flex;
+  flex-direction: row;       /* texto a la izquierda, imagen a la derecha */
+  align-items: stretch;      /* igual altura */
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 16px;       /* esquinas redondeadas */
+  padding: 2rem;             /* espacio interno más amplio */
+  margin: 2rem auto;         /* separa bloques */
+  width: 90%;                /* ocupa casi todo el contenedor */
+  max-width: 1200px;         /* nunca más ancho que esto */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border-left: 4px solid #f5c518; /* línea lateral inicial amarilla */
+  transition: transform 0.3s ease;
+}
+
+/* Fondo alternado y línea lateral */
+#explicacion-fases.fases-lunares-explicacion .fase-card:nth-child(even) {
+  border-left: 4px solid #3498db; /* celeste en pares */
+}
+
+/* Columnas dentro del bloque */
+#explicacion-fases.fases-lunares-explicacion .fase-card .col-lg-8 {
+  flex: 2;
+  padding-right: 1.5rem;
+}
+
+#explicacion-fases.fases-lunares-explicacion .fase-card .col-lg-4 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen */
+#explicacion-fases.fases-lunares-explicacion .fase-card img {
+  width: 70%;
+  height: auto;
+  max-height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#explicacion-fases.fases-lunares-explicacion .fase-card img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+/*Responsivo solo para esta seccion de las fases de las lunas */
+/* Responsive: apila columnas en móviles */
+
+/* ================== XS (0–575px) ================== */
+@media (max-width: 575px) {
+  .intro-section {
+    display: flex;
+    flex-direction: column;   /* en S: texto arriba, imagen abajo */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;                /* un poquito menos de espacio */
+    text-align: left;       /* centrado en móviles queda más limpio */
+  }
+
+  .intro-section h1 {
+    font-size: 1.8rem;        /* más compacto que en M */
+  }
+
+  .intro-section p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .intro-section img {
+    max-width: 450px;         /* reducimos imagen */
+    height: auto;
+  }
+
+  /* Ajuste de cards de fases lunares */
+  #explicacion-fases.fases-lunares-explicacion .fase-card {
+    width: 100%;
+    max-width: 400px;         /* más angosto que 500px */
+    flex-direction: column;   /* apilar contenido en pantallas chicas */
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion img {
+    width: 50%;
+    max-width: 200px; /* o el valor que quieras como límite */
+    height: auto;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion h2 {
+    font-size: 1.1rem;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+}
+
+/* ================== S (576–767px) ================== */
+@media (min-width: 576px) and (max-width: 767px) {
+  .intro-section {
+    display: flex;
+    flex-direction: row;       /* texto a la izquierda, imagen a la derecha */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;                 /* menos espacio entre texto e imagen */
+    text-align: left;
+  }
+
+  .intro-section h1 {
+    font-size: 1.8rem;         /* más chico que en M */
+  }
+
+  .intro-section p {
+    font-size: 0.85rem;        /* más compacto */
+  }
+
+  .intro-section img {
+    max-width: 380px;          /* más chica la imagen que en M */
+    width: 100%;
+    height: auto;
+  }
+
+  .intro-text {
+    flex: 1;                   /* ocupa lo que haga falta */
+  }
+
+  /* --- Fases lunares --- */
+  #explicacion-fases.fases-lunares-explicacion .fase-card {
+      width: 95%;
+      max-width: 600px;        /* más angosto */
+      flex-direction: column;  /* en S mejor apilar */
+      gap: 0.8rem;
+      padding: 1rem;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion .col-lg-8,
+  #explicacion-fases.fases-lunares-explicacion .col-lg-4 {
+      flex: 1;
+      text-align: center;      /* más legible en pantallas chicas */
+  }
+
+  #explicacion-fases.fases-lunares-explicacion img {
+      width: 100%;
+      max-width: 200px;        /* que no se dispare el tamaño */
+      height: auto;
+      margin: 0 auto;          /* centrar */
+  }
+
+  #explicacion-fases.fases-lunares-explicacion h2{
+    font-size: 1.8rem;
+  }
+  #explicacion-fases.fases-lunares-explicacion p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      text-align: left;
+  }
+}
+
+
+/* ================== M (768–991px) ================== */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .intro-section {
+    display: flex;
+    flex-direction: row;   /* texto a la izquierda, imagen a la derecha */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;             /* espacio entre texto e imagen */
+    text-align: left;      /* alinear texto a la izquierda */
+  }
+
+  .intro-section h1 {
+    font-size: 2.2rem;     /* más chico que en desktop */
+  }
+
+  .intro-section p {
+    font-size: 0.95rem;    /* un poco más compacto */
+  }
+
+  .intro-section img {
+    max-width: 550px;      /* reducir tamaño de la imagen */
+    height: auto;
+  }
+
+  /* Podés agrupar título + párrafo en un div */
+  .intro-text {
+    flex: 1;               /* que ocupe lo que haga falta */
+  }
+
+  #explicacion-fases.fases-lunares-explicacion .fase-card  {
+      width: 100%;
+      max-width: 1000px;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 1.2rem;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion .col-lg-8,
+  #explicacion-fases.fases-lunares-explicacion .col-lg-4 {
+      flex: 1;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion img {
+      width: 80%;
+      height: auto;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion h2{
+    font-size: 1.5rem;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion p {
+      font-size: 1rem;
+      line-height: 1.4;
+      text-align: left;
+  }
+}
+
+/* ================== L (992–1199px) ================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #explicacion-fases.fases-lunares-explicacion .fase-card  {
+      width: 90%;
+      max-width: 900px;
+      flex-direction: row;
+      gap: 2rem;
+      padding: 2rem;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion .col-lg-8 {
+      flex: 2;
+      text-align: left;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion .col-lg-4 {
+      flex: 1;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion img {
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion h2{
+    font-size: 2rem;
+  }
+  #explicacion-fases.fases-lunares-explicacion p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: left;
+  }
+}
+
+/* ================== XL (1200–1399px) ================== */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #explicacion-fases.fases-lunares-explicacion .fase-card  {
+      width: 80%;
+      max-width: 1200px;
+      padding: 2rem;
+  }
+    #explicacion-fases.fases-lunares-explicacion .col-lg-8 {
+      flex: 2;
+      text-align: left;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion .col-lg-4 {
+      flex: 1;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion img {
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion h2{
+    font-size: 2rem;
+  }
+  #explicacion-fases.fases-lunares-explicacion p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: left;
+  }
+}
+
+/* ================== XXL (1400px y más) ================== */
+@media (min-width: 1400px) {
+  #explicacion-fases.fases-lunares-explicacion .fase-card  {
+      width: 80%;
+      max-width: 1400px;
+      padding: 2rem;
+  }
+    #explicacion-fases.fases-lunares-explicacion .col-lg-8 {
+      flex: 2;
+      text-align: left;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion .col-lg-4 {
+      flex: 1;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion img {
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  #explicacion-fases.fases-lunares-explicacion h2{
+    font-size: 2rem;
+  }
+  #explicacion-fases.fases-lunares-explicacion p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: left;
+  }
+}
